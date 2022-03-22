@@ -38,5 +38,4 @@ var isValid = function (s) {
     }
   }
   return (temporary.length === 0)
-  return false
 }
