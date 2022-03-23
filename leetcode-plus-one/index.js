@@ -24,5 +24,3 @@ var plusOne = function (digits) {
     }
   }
 };
-
-//commented out code
