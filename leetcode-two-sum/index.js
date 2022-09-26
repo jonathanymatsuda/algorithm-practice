@@ -15,3 +15,19 @@ const twoSum = (nums, target) => {
   }
   return indices
 }
+
+// Two Pass Hash
+var twoSum = function(nums, target) {
+    const indicesHash = {}
+
+    nums.forEach((number, index) => {
+        indicesHash[number] = index
+    })
+
+    for (let i = 0; i < nums.length; i++) {
+        const difference = target - nums[i]
+        if (indicesHash[difference] !== undefined && indicesHash[difference] !== i) {
+            return [i, indicesHash[difference]]
+        }
+    }
+}
